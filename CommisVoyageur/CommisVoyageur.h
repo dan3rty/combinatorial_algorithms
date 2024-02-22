@@ -14,7 +14,8 @@ public:
 		: m_roads(std::move(roads)){};
 	std::vector<size_t> CountBestPermutation();
 	void OutputPermutation(const std::vector<size_t>& permutation);
-
 private:
 	Matrix m_roads;
 };
+
+void DurationForecast(long double duration);

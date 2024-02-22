@@ -7,7 +7,7 @@ std::vector<size_t> CommisVoyageur::CountBestPermutation()
 	{
 		permutations.push_back(i);
 	}
-	std::vector<size_t> bestPermutation;
+	std::vector<size_t> bestPermutation = permutations;
 	size_t min = INT_MAX;
 	do
 	{
@@ -31,4 +31,28 @@ void CommisVoyageur::OutputPermutation(const std::vector<size_t>& permutation)
 	{
 		std::cout << permutation[i] << std::endl;
 	}
+}
+
+void DurationForecast(long double duration)
+{
+	for (int i = 11; i <= 15; i++)
+	{
+		duration *= i;
+	}
+	duration /= 3600;
+	std::cout << "N = 15: " << duration << " hours" << std::endl;
+
+	for (int i = 16; i <= 20; i++)
+	{
+		duration *= i;
+	}
+	duration /= 24;
+	std::cout << "N = 20: " << duration << " days" << std::endl;
+
+	for (int i = 21; i <= 50; i++)
+	{
+		duration *= i;
+	}
+	duration /= 365;
+	std::cout << "N = 50: " << duration << " years" << std::endl;
 }
