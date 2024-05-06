@@ -1,4 +1,4 @@
-#include "Gamma.cpp"
+#include "Gamma.h"
 #include <iostream>
 #include <vector>
 
@@ -44,7 +44,8 @@ int main()
 	 };
 	//  написать вывод исходного графа
 	Graph gr(graph);
-	std::vector<std::vector<int>> planar = gr.getPlanarLaying();
+	gr.getPlanarLaying();
+	std::vector<std::vector<int>> planar = gr.getFaces();
 	if (planar.size() != 0)
 	{
 		std::cout << "Graph is planar!!! Faces of planar graph:" << std::endl;
